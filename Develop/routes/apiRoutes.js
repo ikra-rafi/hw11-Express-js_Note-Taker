@@ -1,9 +1,10 @@
 // node server.js to see what port is listening on.
-
+//path package to find way to html
 const fs = require("fs")
 const path = require("path");
 
 let noteDate;
+//routing
 module.exports = (app) => {
     // API GET Requests
     // Below code handles when users "visit" a page.
@@ -22,7 +23,7 @@ module.exports = (app) => {
     // Then the server saves the data to the tableData array)
     // ---------------------------------------------------------------------------
   
-    app.post('/api/notes', (req, res) => {
+    app.post("/api/notes", (req, res) => {
       // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
       // It will do this by sending out the value "true" have a table
       // req.body is available since we're using the body parsing middleware
