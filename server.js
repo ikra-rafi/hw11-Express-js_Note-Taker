@@ -11,47 +11,50 @@ const app = express();
 // Sets an initial port. We"ll use this later in our listener
 const PORT = process.env.PORT || 3000;
 
-// CSS
-app.use(express.static(__dirname + "public"));
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// notes.html
-app.get("/notes", (req,res) => {
-  res.sendFiel(path.join(__dirname,"./public/notes.html"));
-
-});
-
-// reads db file and return the saved inputs to json
-app.get("/api/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "/db/db.json"))
-});
-
-// routing to index.html
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/index.html"));
-});
-
-//POST
-
-
-
 require("./Develop/routes/apiRoutes")(app);
 require("./Develop/routes/htmlRoutes")(app);
+
+// CSS js
+app.use(express.static(__dirname + "public"));
+// notes.html
+// app.get("/notes", (req,res) => {
+//   res.sendFile(path.join(__dirname,"./public/notes.html"));
+
+// });
+
+// reads db file and return the saved inputs to json
+// app.get("/api/notes", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/db/db.json"))
+// });
+
+// routing to index.html
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/public/index.html"));
+// });
+
+//POST: new note which will add it to the dbjson 
+
+// app.post("/api/notes")
+
+
+
+
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
 
 // Tells node that we are creating an "express" server
-const dbJson = require("./Develop/db/db.json")
+const dbJson = require("./Develop/db/db.json");
 
 
 
 // node server.js to see what port is listening on.
 
-app.use(express.static("./"));
+// app.use(express.static("./Develop/index.html"));
 // app.use("/api", apiRoutes);
-// app.use("/", htmlRoutes);
+// app.use("./Develop/routes/htmlRoutes.js");
 
 
 

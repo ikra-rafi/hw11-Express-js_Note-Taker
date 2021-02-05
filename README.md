@@ -1,3 +1,29 @@
+# Homework Note Taker using Express.js
+## Partners in Crime: 
+Luna Shuqair https://github.com/LShuqair
+Menuka Gusain https://github.com/Menuka786
+Zaid Alharahsheh 
+
+## Pictures of Code
+![Get Started](Assets\3000getstarted.png)
+## Links
+https://github.com/ikra-rafi/hw11-Express-js_Note-Taker
+### Description
+1. Create an app called Note Taker that will be used to write and save notes. This app will also allow you to delete or rewrite your notes, too. 
+2. Created api and html routes in route folder. Also created a server.js file
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 11 Express.js: Note Taker
 
 ## Your Task
