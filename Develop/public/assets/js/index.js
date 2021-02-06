@@ -1,8 +1,4 @@
-let noteTitle;
-let noteText;
-let saveNoteBtn;
-let newNoteBtn;
-let noteList;
+
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -69,18 +65,17 @@ const renderActiveNote = () => {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
-    // noteTitle.setAttribute("readonly", true);
-    // noteText.setAttribute("readonly", true);
+    noteTitle.setAttribute("readonly", true);
+    noteText.setAttribute("readonly", true);
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
   } else {
-    // noteTitle.setAttribute("readonly", true);
-    // noteText.setAttribute("readonly", true);
-    noteTitle.value = ""
+    noteTitle.removeAttribute("readonly", true);
+    noteText.removeAttribute("readonly", true);
+    noteTitle.value = "";
     noteText.value = "";
   }
 };
-
 
 const handleNoteSave = () => {
   const newNote = {

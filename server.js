@@ -1,8 +1,8 @@
 // DEPENDENCIES
 // Series of npm packages that we will use to give our server useful functionality
-// 0205 const fs = require("fs");
+const fs = require("fs");
 const express = require('express');
-// 0205 const path = require("path");
+const path = require("path");
 
 // ROUTER
 // The below points our server to a series of "route" files.
@@ -14,43 +14,16 @@ const PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
-// CSS js
-app.use(express.static(__dirname + "/Develop/public"));
-
-
-// });
-require("./Develop/routes/apiRoutes")(app);
-require("./Develop/routes/htmlRoutes")(app);
-
-// reads db file and return the saved inputs to json
-// app.get("/api/notes", (req, res) => {
-//   res.sendFile(path.join(__dirname, "/db/db.json"))
-// });
-
-// routing to index.html
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "/public/index.html"));
-// });
-
-//POST: new note which will add it to the dbjson 
-
-// app.post("/api/notes")
-
-
+app.use(express.static(__dirname + "/develop/public"));
+require("./develop/routes/apiRoutes")(app);
+require("./develop/routes/htmlRoutes")(app);
 
 
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
 
 // Tells node that we are creating an "express" server
-const dbJson = require("./Develop/db/db.json");
-
-
-
-
-
+const dbJson = require("./develop/db/db.json");
 
 
 // LISTENER

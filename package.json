@@ -1,5 +1,24 @@
 {
+  "name": "hw11-express-js_note-taker",
+  "version": "1.0.0",
+  "description": "Luna Shuqair https://github.com/LShuqair\r Menuka Gusain https://github.com/Menuka786\r Zaid Alharahsheh",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikra-rafi/hw11-Express-js_Note-Taker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikra-rafi/hw11-Express-js_Note-Taker/issues"
+  },
+  "homepage": "https://github.com/ikra-rafi/hw11-Express-js_Note-Taker#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
   }
 }
