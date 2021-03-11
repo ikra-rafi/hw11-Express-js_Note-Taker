@@ -8,6 +8,9 @@ Zaid Alharahsheh
 ![Get Started](Assets\3000getstarted.png)
 ## Links
 https://github.com/ikra-rafi/hw11-Express-js_Note-Taker
+### Heroku Link
+new https://still-earth-06044.herokuapp.com/
+old https://fast-refuge-06082.herokuapp.com/notes
 ### Description
 1. Create an app called Note Taker that will be used to write and save notes. This app will also allow you to delete or rewrite your notes, too. 
 2. Created api and html routes in route folder. Also created a server.js file
